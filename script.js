@@ -1,10 +1,8 @@
-/* splice(str) - это универсальный «швейцарский нож» для работы с массивами. 
-Умеет всё: добавлять, удалять и заменять элементы.*/
+// splice(str)
 
 let users = ["developer", " manager", " superiors",];
 
 users.splice(2, 3, " workshop");
-
 console.log(users);
 
 // slice
@@ -13,38 +11,40 @@ let arr = ["a", "b", "c", "d"];
 console.log(arr.slice(0, 2));
 console.log(arr.slice(-3));
 
-/* map вызывает функцию для каждого элемента массива и возвращает 
-массив результатов выполнения этой функции.*/
+// map 
 let numbers = [100, 150, 200, 250];
+
 let conclusion = numbers.map(number => number * 4 / 2 + " kg");
 console.log(conclusion);
 
 // for
 let x = [1, 2, 3, 4];
+
 let y;
 for (i = 0; i < x.length; i++) {
   console.log(x[i]);
 }
 
-// forEach позволяет запускать функцию для каждого элемента массива
+// forEach
 let heroes = ["Frodo", "Gandalf", "Legolas"];
+
 heroes.forEach((item, index, array) => {
   console.log(`${item} имеет позицию ${index} в ${array}`);
 });
 
-/* filter если найденых элементов может буть много, аозвращает массив 
-из всех подходящих элементов*/
+// filter
 let symbols = [15, 25, 13, 44, 5];
+
 let symbol = symbols.filter(num => num >= 15);
 console.log(symbol);
 
-/* arr.reduce используется для вычисления какого-нибудь единого значения
-на основе всего массива*/
+// reduce 
 let arrReduce = [1, 3, 5, 7, 9];
+
 let result = arrReduce.reduce((sum, current) => sum + current, 0);
 console.log(result);
 
-// sort(fn) сортирует массив на месте, меняя в нем порядок элементов.
+// sort(fn) 
 function compareNumeric(a, b) {
   if (a > b) return 1;
   if (a == b) return 0;
@@ -55,10 +55,7 @@ let arrSort = [8, 2, 7, 5, 4];
 arrSort.sort(compareNumeric);
 console.log(arrSort);
 
-/* some проверяет элементы массива в соответствии с переданной 
-функцией. Эта функция передается параметром метода и выполняется для каждого элемента массива.
-Метод возвращает true, если хотя бы для одного элемента массива переданная функция вернет true,
-в противном случае метод возвращает false.*/
+// some 
 let positiveNumber = [-1, -2, -3, 4];
 
 let check = positiveNumber.some(function(elem){
@@ -70,9 +67,7 @@ let check = positiveNumber.some(function(elem){
 })
 console.log(check);
 
-/* every проверяет элементы массива в соответствии с переданной функцией.
-Эта функция передается параметром метода и выполняется для каждого элемента массива.
-Метод возвращает true, если для всех элементов массива переданная функция вернет true, в противном случае метод возвращает false.*/
+// every
 let composition = [1, 2, 3, 4, 5];
 
 let check_1 = composition.every(function(elem, index){
